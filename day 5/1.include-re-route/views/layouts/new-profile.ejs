@@ -1,0 +1,15 @@
+
+<h1>Your profile has been updated, <%= name %>!</h1>
+<div>
+<p>Now our records have you listed as:</p>
+<ul>
+<li><%= name %></li>
+<li><%= email %></li>
+</ul>
+</div>
+<br/>
+<br/>
+<input type="button" value="On to landing Page" onClick="window.location.href='/landing/<%= id %>'"/>
+<br/>
+<br/>
+<input type="button" value="Logout" onClick="window.location.href='/logout'"/>

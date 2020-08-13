@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Edit</h1>
+  <form action="/user/update/<%= id %>" method="POST">
+    <h3>Please Update your name and/or email</h3>
+    <p><code>POST /update/<%= id %></code></p>
+    <input id="newname" type="text" name="newname" placeholder="newname">
+    <input id="newemail" type="email" name="email" placeholder="newemail">
+    <input type="submit" value="Update Profile">
+  </form>
+</div>

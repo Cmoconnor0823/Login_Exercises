@@ -1,0 +1,13 @@
+<h1>Hello, <%= name %> <h2>
+<br/>
+<br/>
+<input type="button" value="On to landing Page" onClick="window.location.href='/landing/<%= id %>'"/>
+<br/>
+<br/>
+<input type="button" value="Update Profile" onClick="window.location.href='/user/update/<%= id %>'">
+<br/>
+<br/>
+<input type="button" value="Delete Profile" onClick="window.location.href='/user/removeUser/<%= id %>'">
+<br/>
+<br/>
+<input type="button" value="Logout" onClick="window.location.href='/auth/logout'"/>

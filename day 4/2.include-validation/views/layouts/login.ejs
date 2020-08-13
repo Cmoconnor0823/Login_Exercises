@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Login</h1>
+  <form action="/login" method="POST">
+    <h3>Please enter your email and password</h3>
+    <p><code>GET /login</code></p>
+    <input id="uemail" type="email" name="email" placeholder="useremail">
+    <input id="password" type="password" name="password" placeholder="userpassword">
+    <input type="submit" value="Submit">
+    <br/>
+    <br/>
+    <input type="button" value="Register" onClick="window.location.href='/register'">
+  </form>
+</div>
+<%- include('../partials/passport-message') %>
+<% if(success && success.length > 0){ %>
+    <div>
+        <%= success %>
+    </div>
+<% } %>
+
+
+        

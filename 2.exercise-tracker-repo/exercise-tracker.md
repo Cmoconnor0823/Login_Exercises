@@ -1,15 +1,20 @@
 # Exercise-Tracker Repo
 
-This repository came from a daily exercise made as a demonstration for how to get started on the "Exercise Tracker" final project in PCC. It's css and basic layout will be used for this weeklong demo/exercise on how to build a simple user login/authentication component. It might be helpful, before adding the bcryptjs demo code to this repository, to review the basic express/mongoose server set up.
+This repository came from a daily exercise made as a demonstration
+for how to get started on the "Exercise Tracker" final project in PCC.
+The css and basic layout will be used for this weeklong demo/exercise on how
+to build a simple user login/authentication component. It might be helpful, before
+adding the bcryptjs demo code to this repository, to review the basic express/mongoose
+server set up.
 
 ## File Structure and Architecture
 
-* repo created with npm init -y, creating a package json and package lock json
-* dependencies are express and mongoose
-* dev dependencies are dotenv (to store hidden variables) and nodemon (to not always be restarting server)
+* The repo has already been created with npm init -y, creating a package json and package lock json, you will need to edit this file with your name and a short description
+* The included dependencies are express and mongoose
+* The included dev dependencies are dotenv (to store hidden variables) and nodemon (to have a server that will automatically restart with any changes)
 * The start scripts were added in the package json, both node start - server.js and dev - nodemon server.js
-* There is a views folder with the html form - which will eventually become ejs
-* There is a public folder with CSS - and additional items (a font and an icon) that are there to make everything local
+* There is a views folder that contains the html form - which will eventually become ejs
+* There is a public folder that contains the CSS - and additional items (a font and an icon) that are there to make everything local
 * There is a models folder with a user mongoose model
 * There is a gitignore file so that the node_modules and .env file are not saved/exposed
 * The .env file is there mostly to get into the habit of using .env and .gitignore
@@ -17,9 +22,9 @@ This repository came from a daily exercise made as a demonstration for how to ge
 ## Models / User Schema
 
 * The user model is blank in the repo
-* It will need a name and password fields (and optionally a timestamp) - later there will be an email field
+* You will need to add in name and password fields (and optionally a timestamp) - at a later point we will add an email field as well
 * The provided code is boilerplate, and is done slightly differently in some tutorials, but the outcome is the same
-* It might be helpful to remind the student that the model is how the server interacts with the database.
+* It might be helpful to remember that the model is how the server interacts with the database.
 
 ## Server
 
@@ -63,7 +68,3 @@ This repository came from a daily exercise made as a demonstration for how to ge
 * The HTML is a form which POSTs information to the route endpoint
 * It might be useful to remind the students that the variables in the 'route' code come from the 'name' property in the HTML form, as do the endpoints
 * It is also good to remind the students that the server does not automatically 'see' the HTML or CSS (or javascript). The server needs to be pointed in their direction.
-
-
-
-

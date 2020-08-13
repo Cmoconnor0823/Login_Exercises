@@ -12,7 +12,7 @@ const PORT = process.env.PORT;
 //include Model
 const User = require('./models/User');
 
-//middle ware
+//Middleware
 //cannot use nested object in url, but will filter out query string "?".
 app.use(express.urlencoded({
   extended: false

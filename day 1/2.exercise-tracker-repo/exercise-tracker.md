@@ -33,33 +33,38 @@ This repository was made as a demonstration for how to get started on the "Exerc
 ### Model
 
 * There is a space to include the model. Set it to const User and require the model you created earlier. Do not forget that in our app  a) it is User with a capital 'U' due to how we named it in our model (and it is standard to use a capitial letter here), and b) when you see 'User' think 'database'.
+* ex: const User = require('file path to User.js here ');
 
 ### Middleware
 
-* can be cut and pasted
-* Express urlencoded lets the url make the req.body. False means that it cannot have nested code in the URL, but can include queries? (Or at least that is my understanding)
+*Those methods/functions/operations that are called BETWEEN processing the Request and sending the Response in your application method.*
+
+* The next lines are our middleware you can reference this portion from a prior document, or look  at your documentation.
+* Express urlencoded lets the url make the req.body. There are several options here, and for more information refer to your documentation. In this case we want to set extended to false to parse our data with the queryString library
 * express.json() replaces body-parser, allows server to read req.body
-* express.static() allows the server to read that which is in the public folder (i.e. css, javascript, images, icons, fonts etc.)
+* express.static() allows the server to read the contents of the public folder (i.e. css, javascript, images, icons, fonts etc.)
 
 ### Routes
 
-* '/'
+* app.get '/' -What to serve up at our landing for our site
 * res.sendFile() serves up the html file
-* There is a space for an additional GET route and a POST route used in the original exercise
+* Since we are using the template file from the Exercise Traceker project,there is a space for an additional GET route and a POST route leave these empty for now.
 
 ### Connect Mongoose
 
-* There are two additional objects to be passed to mongoose to avoid a deprication error, they will be added in another exercise
-* connects MongoDB to the server, the mongoose model acts as the 'go-between'
+* Now we connect to our database with mongoose. Our first parameter, process.env.DATABASE_URI, is stored in our .env file
+* There are two additional objects to be passed to mongoose to avoid a deprication error: { useNewUrlParser: true, useUnifiedTopology: true }
+* This function connects MongoDB to the server, the mongoose model acts as the 'go-between'
 
 ### App listen
 
-* starts the server listening in a port
-* open terminal and type in npm run dev to start (with nodemon)
-* Should see console.logs from the database and the server 
+* app.listen starts the server listening in a port -(the port stored in our .env file)
+* Now go ahead and open your terminal and type in npm run dev to start (with nodemon)
+* Youe should see console.logs from the database and the server telling you that mongoose is connected and which port your site is being hosted on
 
 ## Views
 
+* Now go to your view folder and review the contents.
 * The HTML is a form which POSTs information to the route endpoint
-* It might be useful to remind the students that the variables in the 'route' code come from the 'name' property in the HTML form, as do the endpoints
-* It is also good to remind the students that the server does not automatically 'see' the HTML or CSS (or javascript). The server needs to be pointed in their direction.
+* It might be useful to remember that the variables in the 'route' code come from the 'name' property in the HTML form, as do the endpoints
+* It is also good to remember that the server does not automatically 'see' the HTML or CSS (or javascript). The server needs to be pointed in their direction.

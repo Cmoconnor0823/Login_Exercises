@@ -1,0 +1,8 @@
+# Include bcrypt-demo Code into Exercise-Tracker Repo
+
+* install bcryptjs and require
+* in server make a POST '/register' route
+* in HTML make sure endpoints match
+* in server POST route add code from bcrypt-demo, async makePassword(password) function
+* username and password come from HTML form
+* returns saved user in json format 

@@ -1,0 +1,28 @@
+# Bcrypt Demo
+## The most basic encrypted login
+
+### Set up demo
+
+* install npm - npm init -y
+* install bcryptjs and nodemon
+* in package.json add start script: nodemon demo.js
+* to run type npm run start
+* require bcryptjs
+
+## This portion of code will be in the registration part of login-exercise
+### Make a user with an encrypted password
+
+* makePassword function takes in a password, is asynchronous
+* hard code a user
+* await the generation of a salt - so that it does not return undefined
+* console.log the salt
+* bcryptjs takes in password and salt
+* run the function and display salted/hashed password
+
+## This portion of code will be in the login
+### Compare the user's password in the database with password entered upon logging in
+
+* async function comparePassword takes in a password and a hashed password
+* the function awaits bcryptjs method compare(); compares the two passwords and returns a boolean
+* if passwords match, then the user is authenticated and can enter the site
+* if the passwords don't match, then the user is not authenticated and can be directed to retry

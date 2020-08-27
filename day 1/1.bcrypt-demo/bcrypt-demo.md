@@ -14,7 +14,7 @@
 
 ### Make a user with an encrypted password
 
-* In your demo.jd file take a look at the makePassword function. It takes in a password, and is asynchronous.
+* In your demo.js file take a look at the makePassword function. It takes in a password, and is asynchronous.
 * For our example there is a user already defined for you.
 * Next we created a variable salt, to await the generation of a salt - we use await so that it does not return undefined
 * Now we console.log the salt to see what was generated for us. -Comment out this console.log before moving on

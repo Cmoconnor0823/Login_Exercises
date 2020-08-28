@@ -9,6 +9,8 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT;
 
+const bcrypt = require('bcryptjs');
+
 //include Model
 const User = require('./models/User');
 
@@ -27,8 +29,25 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-//post to "/api/daily-exercise/user"
-
+//post to "/register"
+app.post('/register', async (req, res) => {
+  let name = req.body.username;
+  let userPassword = req.body.password;
+  //async function createUser(name, userPassword) {
+    try {
+      const salt = await bcrypt.genSalt(10);
+      let password = await bcrypt.hash(userPassword, salt);
+      let user = new User({
+        name: name,
+        password: password
+      });
+      user.save();
+      //render user name
+      res.render('layouts/username', {name: user.name});
+    } catch (err) {
+      console.log(err);
+    }
+});
 
 //get on '/api/daily-exercise/users'
 
